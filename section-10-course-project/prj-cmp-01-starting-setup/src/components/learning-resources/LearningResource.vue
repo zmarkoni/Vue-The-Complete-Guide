@@ -1,5 +1,5 @@
 <template>
-  <li>
+  <li class="learningResource">
     <base-card>
       <header>
         <h3>{{ title }}</h3>
@@ -18,7 +18,7 @@
 
 export default {
   props: ['id','title', 'description', 'link'],
-  inject: ['removeResource']
+  inject: ['removeResource'] // from TheResources, and will be handled there
 };
 </script>
 

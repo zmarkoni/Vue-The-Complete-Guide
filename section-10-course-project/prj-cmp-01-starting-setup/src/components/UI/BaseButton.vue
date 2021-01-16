@@ -26,14 +26,14 @@ button:active {
   border-color: #270041;
 }
 
-.flat {
+.active {
   background-color: transparent;
   color: #3a0061;
   border: none;
 }
 
-.flat:hover,
-.flat:active {
+.active:hover,
+.active:active {
   background-color: #edd2ff;
 }
 </style>

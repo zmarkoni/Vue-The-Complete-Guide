@@ -1,6 +1,5 @@
 <template>
 <teleport to="body">
-  <div @click="$emit('close')"></div>
   <dialog open>
     <header>
       <slot name="header">
@@ -25,7 +24,7 @@
 import BaseButton from './BaseButton.vue';
 export default {
   components: { BaseButton },
-  emits: ['close'],
+  emits: ['close'], // will be used in AddResource with @close="confirmError" to bind method
   props: {
     title: {
       type: String,

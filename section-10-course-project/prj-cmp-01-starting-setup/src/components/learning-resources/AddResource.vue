@@ -1,20 +1,6 @@
 <template>
-  <div>
-    <base-dialog
-      v-if="inputIsInvalid"
-      title="Invalid Input"
-      @close="confirmError"
-    >
-      <template #default>
-        <p>Input value is not valid</p>
-        <p>Please check all inputs and add some characters!</p>
-      </template>
-      <template #actions>
-        <button @click="confirmError">OK</button>
-      </template>
-    </base-dialog>
-
-    <base-card>
+  <div id="addResource">
+    <base-card class="baseCardForm">
       <form @submit.prevent="submitData">
         <div class="form-control">
           <label for="title">Title</label>
@@ -38,6 +24,20 @@
         </div>
       </form>
     </base-card>
+
+    <base-dialog class="errorMessage"
+      v-if="inputIsInvalid"
+      title="Invalid Input"
+      @close="confirmError"
+    >
+      <template #default>
+        <p>Input value is not valid</p>
+        <p>Please check all inputs and add some characters!</p>
+      </template>
+      <template #actions>
+        <button @click="confirmError">OK</button>
+      </template>
+    </base-dialog>
   </div>
 </template>
 
@@ -46,8 +46,7 @@ import BaseDialog from '../UI/BaseDialog.vue';
 
 export default {
   components: { BaseDialog },
-  emits: ['set-data'],
-  inject: ['addResource'],
+  inject: ['addResource'], // from TheResources
   data() {
     return {
       inputIsInvalid: false
@@ -63,9 +62,10 @@ export default {
         this.inputIsInvalid = true;
         return;
       }
-      this.addResource(title, desc, link);
+      this.addResource(title, desc, link); //will be handled in TheResorces
     },
     confirmError() {
+      // It is configured in BaseDialog.vue to emit '@close' event
       this.inputIsInvalid = false;
     }
   }
