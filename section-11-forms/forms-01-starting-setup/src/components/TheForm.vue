@@ -93,6 +93,9 @@
       </div>
     </div>
     <div class="form-control">
+      <raiting-control v-model="rating"></raiting-control>
+    </div>
+    <div class="form-control">
       <!-- If we have just 1 checkbox v-model will return true/false -->
       <input
         type="checkbox"
@@ -109,7 +112,9 @@
 </template>
 
 <script>
+import RaitingControl from './RaitingControl.vue';
 export default {
+  components: { RaitingControl },
   data() {
     return {
       userName: '',
@@ -118,7 +123,8 @@ export default {
       interest: [],
       how: null,
       confirm: false,
-      userNameValidity: 'pending'
+      userNameValidity: 'pending',
+      rating: null
     };
   },
   methods: {
@@ -141,6 +147,9 @@ export default {
 
       console.log('Confirm: ' + this.confirm);
       this.how = confirm;
+
+      console.log('Rating: ' + this.rating);
+      this.rating = null;
     },
     validateInput() {
       if (this.userName === '') {
