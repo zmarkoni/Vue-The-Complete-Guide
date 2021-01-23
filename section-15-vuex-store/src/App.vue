@@ -8,7 +8,7 @@
 		</base-container>
 
 		<base-container title="Auth">
-			<user-active></user-active>
+			<user-auth></user-auth>
 		</base-container>
 	</div>
 </template>
@@ -18,7 +18,8 @@ import BaseContainer from './components/BaseContainer.vue';
 import ChangeCounter from './components/ChangeCounter.vue';
 import FavoriteValue from './components/FavoriteValue.vue';
 import TheCounter from './components/TheCounter.vue';
-import UserActive from './components/UserActive.vue';
+import UserAuth from './components/UserAuth.vue';
+
 
 export default {
 	components: {
@@ -26,7 +27,8 @@ export default {
 		TheCounter,
 		ChangeCounter,
 		FavoriteValue,
-		UserActive,
+UserAuth,
+	
   },
   computed: {
 		isAuth() {
@@ -43,7 +45,7 @@ export default {
       }); */
 			// Using Actions instead of Mutations
 			this.$store.dispatch({
-				type: 'increase',
+				type: 'numbers/increase',
 				value: 10,
 			});
 		},

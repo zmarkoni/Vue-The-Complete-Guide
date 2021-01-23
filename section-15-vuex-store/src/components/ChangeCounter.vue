@@ -17,7 +17,7 @@ export default {
 			this.$store.dispatch('increment');
 		}, */
 		// Use mapActions instead of just Actions
-		...mapActions(['increment', 'increase'])
+		...mapActions('numbers', ['increment', 'increase'])
 	},
 };
 </script>
