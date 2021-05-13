@@ -14,6 +14,7 @@ const app = Vue.createApp({
       this.goals.push(this.enteredGoalValue);
     },
     removeGoal(index) {
+      // Remove goal with passed index
       this.goals.splice(index, 1);
     }
   }

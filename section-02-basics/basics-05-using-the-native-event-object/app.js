@@ -8,7 +8,7 @@ const app = Vue.createApp({
 		};
 	},
 	watch: {
-		// method need to be the same as in DATA
+		// method need to be the same as in DATA because it will watch to it's update
 		/*
 		name(newValue, oldValue) {
 		// will trigger whenever 'name' change
