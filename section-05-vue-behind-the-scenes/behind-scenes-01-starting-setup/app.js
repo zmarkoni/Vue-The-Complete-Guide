@@ -26,12 +26,11 @@ const app = Vue.createApp({
 		console.log('beforeMount()');
 	},
 	mounted() {
-		console.log('mounted()');
-	},
-	mounted() {
+		// app is visible on the page
 		console.log('mounted()');
 	},
 	beforeUpdate() {
+		// when DATA change
 		console.log('beforeUpdate()');
 	},
 	updated() {
@@ -41,6 +40,7 @@ const app = Vue.createApp({
 		console.log('beforeUnmount()');
 	},
 	unmounted() {
+		// app is dead
 		console.log('unmounted()');
 	}
 });
