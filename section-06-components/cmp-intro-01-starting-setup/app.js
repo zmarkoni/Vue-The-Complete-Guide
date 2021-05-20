@@ -19,9 +19,10 @@ const app = Vue.createApp({
 	},
 });
 
-// Component is like HTML element
+// Component is like a custom HTML element
 // need to have 2 words to avoid clash with HTML elements
 // Component is like new Vue app which is connected with main APP
+// Not using data() and HTML from main app
 // Template is required
 app.component('friend-contact', {
 	template: `
@@ -38,10 +39,10 @@ app.component('friend-contact', {
 		return {
 			detailsAreVisible: false,
 			friend: {
-				id: 'manuel',
-				name: 'Manuel Lorenz',
+				id: 'zoran',
+				name: 'Zoran Markovic',
 				phone: '01234 5678 991',
-				email: 'manuel@localhost.com',
+				email: 'zoran@localhost.com',
 			},
 		};
 	},

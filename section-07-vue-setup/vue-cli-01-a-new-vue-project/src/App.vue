@@ -14,27 +14,9 @@
 
 <script>
 import FriendContact from './components/FriendContact.vue'
-// Will ne used in main.js as import App from "./App.vue";
+// Will be used in main.js as import App from "./App.vue";
 export default {
   components: { FriendContact },
-    data() {
-        return {
-            friends: [
-                {
-                    id: 'manuel',
-                    name: 'Manuel Lorenz',
-                    phone: '0123 45678 90',
-                    email: 'manuel@localhost.com'
-                },
-                {
-                    id: 'julie',
-                    name: 'Julie Jones',
-                    phone: '2345 45678 80',
-                    email: 'julie@localhost.com'
-                }
-            ]
-        }
-    }
 }
 </script>
 

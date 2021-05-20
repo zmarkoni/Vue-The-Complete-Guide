@@ -1,10 +1,10 @@
-import { createApp } from 'vue';
-import App from "./App.vue";
-import FriendContact from "./components/FriendContact.vue";
+import { createApp } from 'vue'; // named import
+import App from "./App.vue"; // default import
+//import FriendContact from "./components/FriendContact.vue";
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.component('friend-contact', FriendContact);
-
+//app.component('friend-contact', FriendContact);
+// better to import this component where it is used, in App.vue
 app.mount('#app');
 

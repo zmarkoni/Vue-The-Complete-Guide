@@ -15,15 +15,15 @@ export default {
 		return {
 			detailsAreVisible: false,
 			friend: {
-				id: 'manuel',
-				name: 'Manuel Lorenz',
+				id: 'zoran',
+				name: 'Zoran Markovic',
 				phone: '0123 45678 90',
-				email: 'manuel@localhost.com',
+				email: 'zoran@localhost.com',
 			},
 		};
     },
     methods: {
-        toggleDetails() {
+        toogleDetails() {
             this.detailsAreVisible = !this.detailsAreVisible;
         }
     }
