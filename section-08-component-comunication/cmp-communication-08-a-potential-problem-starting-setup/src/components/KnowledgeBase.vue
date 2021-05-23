@@ -4,9 +4,3 @@
     <knowledge-grid></knowledge-grid>
   </section>
 </template>
-
-<script>
-export default {
-  
-};
-</script>

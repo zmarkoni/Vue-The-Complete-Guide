@@ -49,6 +49,7 @@ export default {
 		},
 	},
 	emits: ['toggle-favorite', 'delete'],
+	// Like props configuration we can add validation for Emiters
 	// emits: {
 	//   'toggle-favorite': function(id) {
 	//     if (id) {

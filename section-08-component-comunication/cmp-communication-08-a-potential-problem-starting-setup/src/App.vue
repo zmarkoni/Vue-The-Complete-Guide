@@ -34,8 +34,8 @@ export default {
   },
   provide() {
     return {
-      topics: this.topics,
-      selectTopic: this.activateTopic
+      topics: this.topics, // used in KnowladgeGrid.vue
+      selectTopic: this.activateTopic // used on KnowladgeElement.vue
     };
   },
   methods: {
