@@ -10,14 +10,14 @@
 			</template>
 			<template v-slot:default>
 				<!-- <p>{{ infoText }}</p> will be rendered Default content -->
-        <p>{{ infoText }}</p>
+				<p>{{ infoText }}</p>
 			</template>
 		</base-card>
 	</section>
 </template>
 
 <script>
-import BaseCard from './BaseCard.vue';
+import BaseCard from './BaseCard.vue'; // slot
 export default {
 	components: { BaseCard },
 	props: ['fullName', 'infoText', 'role'],

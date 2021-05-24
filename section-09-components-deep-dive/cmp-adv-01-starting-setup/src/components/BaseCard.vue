@@ -14,6 +14,7 @@
 export default {
     mounted() {
         console.log('BaseCard: ', this.$slots.default);
+		//console.log('BaseCard: ', this.$slots.header);
     }
 }
 </script>

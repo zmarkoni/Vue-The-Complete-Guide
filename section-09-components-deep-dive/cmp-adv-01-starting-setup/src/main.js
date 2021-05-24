@@ -3,7 +3,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 // import TheHeader from './components/TheHeader.vue';
 import BaseBadge from './components/BaseBadge.vue';
-import BaseCard from './components/BaseCard.vue';
+import BaseCard from './components/BaseCard.vue'; // slot
 
 const app = createApp(App);
 
